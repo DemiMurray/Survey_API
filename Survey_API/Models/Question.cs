@@ -13,7 +13,7 @@ namespace Survey_API.Models
         public string Text { get; set; }
 
         [BsonElement("Options")]
-        public string[] Options { get; set; }
+        public string[]? Options { get; set; }
 
         [BsonElement("Format")]
         public Format Format { get; set; }

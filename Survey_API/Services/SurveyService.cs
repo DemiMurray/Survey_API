@@ -26,7 +26,9 @@ namespace Survey_API.Services
 
         public List<Survey> GetSurveys()
         {
-            return surveys.Find(survey => true).ToList();
+            List<Survey> surveyList = surveys.Find(survey => true).ToList();
+
+            return surveyList;
         }
 
         public Survey CreateSurvey(Survey survey)

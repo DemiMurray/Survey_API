@@ -38,6 +38,8 @@ namespace Survey_API.Controllers
         {
             try
             {
+                newSurvey.CreatedAt = DateTime.Now;
+                newSurvey.UpdatedAt = DateTime.Now;
                 Survey survey = _surveyService.CreateSurvey(newSurvey);
 
                 return Ok(survey);

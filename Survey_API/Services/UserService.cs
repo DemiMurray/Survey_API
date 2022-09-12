@@ -69,7 +69,7 @@ namespace Survey_API.Services
 
         public string Authenticate(string email, string password)
         {
-            var user = this.users.Find(u => u.Email == email && u.Password == password).FirstOrDefault();
+            var user = this.users.Find(u => u.Email == email && u.Password == encrypt(password)).FirstOrDefault();
 
             if(user == null)
             {
